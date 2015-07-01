@@ -12,8 +12,8 @@ If($exists)
     $aav  = ls $assemblyPath | % versioninfo
     # set the semver string to your custom environment variable
     Set-AppveyorBuildVariable -Name $versionEnvVariable -Value $aav.ProductVersion
-    Write-Host "Set env varialble" $versionEnvVariable "to" $aav.ProductVersion
+    Write-Host "Set env variable" $versionEnvVariable "to" $aav.ProductVersion
     # set a custom environment varialble for use in later stage conditions, like Deployment
     Set-AppveyorBuildVariable -Name $conditionEnvVariable -Value $exists
-    Write-Host "Set env varialble" $conditionEnvVariable "to" $exists
+    Write-Host "Set env variable" $conditionEnvVariable "to" $exists
 }
